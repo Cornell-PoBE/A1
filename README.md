@@ -18,7 +18,7 @@ This project aims to help you "ramp up" and get comfortable working with the fol
 
 * [Academic Integrity](#academic-integrity)
 * [System Configuration](#system-configuration)
-* [Organization / Scope](#organization--scope)
+* [Organization](#organization)
 * [Expected Functionality](#expected-functionality)
 * [Testing Your Code](#testing-your-code)
 * [Extending the Assignment](#extending-the-assignment)
@@ -75,7 +75,7 @@ This installs within your virtual environment all the necessary modules that are
 
 **NOTE:** The overarching system configuration concepts are explained in more detail in [`this guide`](http://www.joeantonakakis.com/FlaskDevOps/), which we are using as our standard for setting up `Flask` apps in this course.  For information regarding advanced system configuration (which you might need for some of the project extensions, if you tackle them), refer to that guide.
 
-## Organization / Scope
+## Organization
 
 The following describes the initial file-structure of the directory `./src`:
 
@@ -105,8 +105,53 @@ This initial framework is just a guideline to implementing the base features of 
 
 ## Expected Functionality
 
+In this project, we expect you to make an `API` that lets an application make requests to perform operations on todo list items called `"tasks"`.
+
+Essentially, the application is just keeping track of a series of tasks that a person has to do.  Tasks should contain the following:
+
+* A unique ID (see `Model` class that you should be extending from)
+* A name
+* A description
+* A list of tags (like 'laundry', 'urgent', 'etc.')
+* A time of creation
+* A due date
+
+You should write a model to represent this series of information called `Task`.  In addition, you should write endpoints that let a person do the following:
+
+
+#### Create a task
+`POST /tasks?name={name}&description={description}&tags={tags-comma separated}&due_date={due date in unix time}`
+
+Creates a task given the `URL` params above
+
+#### List all tasks
+`GET /tasks`
+
+Get a list of all tasks
+
+#### Get task by ID
+`GET /tasks/{id}`
+
+Get a task by its ID
+
+#### Delete a task
+`DELETE /tasks/{id}`
+
+Delete a specific task
+
+#### Delete all tasks
+`DELETE /tasks/all`
+
+Delete all tasks
+
 ## Testing Your Code
+
+We recommend testing your code using [`Flask Testing`](http://flask.pocoo.org/docs/0.12/testing/), or `cURL-ing` from the command line (although we prefer the tool [`httpie`](https://httpie.org/) :)).  We'll leave it to you to figure out the details.  
 
 ## Extending the Assignment
 
+TODO
+
 ## Project Submission
+
+TODO
