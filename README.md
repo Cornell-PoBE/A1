@@ -77,7 +77,31 @@ This installs within your virtual environment all the necessary modules that are
 
 ## Organization / Scope
 
+The following describes the initial file-structure of the directory `./src`:
 
+````bash
+.
+├── config.py
+├── requirements.txt
+├── run.py
+└── todo
+    ├── __init__.py
+    ├── db.py
+    ├── models.py
+    └── routes.py
+````
+
+Below consists of brief discussions of each one of the following files:
+
+* `config.py` defines the configuration for the `Flask` app to run with.  You do not need to touch this file.
+* `requirements.txt` outlines the initial module dependencies of the app.  To install these, run `pip install -r requirements.txt`.  If you `pip install` a module during the duration of your project, be sure to `pip freeze > requirements.txt` to add the new module to the `requirements.txt` file, **or else we won't be able to run your project**
+* `run.py` is the run script for the `Flask` app.  You do not need to touch this file.
+* `todo/__init__.py` defines the `Flask` app instance. You do not need to touch this file.
+* `todo/db.py` defines a driver that reads and writes files as a form of persisting the data of your app.  **Read this file to get an idea of what functionalities it affords you**.  
+* `todo/models.py` defines is where you should define the models of your application.  All models should inherit from `Model`, which is the base class defining fundamental fields / functions required to store models as files.
+* `todo/routes.py` defines all the routes (a.k.a. endpoints) that users will be able to interact with in order to create todo list items, delete todo list items, and list todo list items.
+
+This initial framework is just a guideline to implementing the base features of the app.  Feel free to change / reorganize at will.  However, the expected functionality (listed below) stays the same.  
 
 ## Expected Functionality
 
