@@ -91,7 +91,7 @@ The following describes the initial file-structure of the directory `./src`:
     └── routes.py
 ````
 
-Below consists of brief discussions of each one of the following files:
+Below consists of brief discussions of each one of the above files:
 
 * `config.py` defines the configuration for the `Flask` app to run with.  You do not need to touch this file.
 * `requirements.txt` outlines the initial module dependencies of the app.  To install these, run `pip install -r requirements.txt`.  If you `pip install` a module during the duration of your project, be sure to `pip freeze > requirements.txt` to add the new module to the `requirements.txt` file, **or else we won't be able to run your project**
@@ -116,7 +116,7 @@ Essentially, the application is just keeping track of a series of tasks that a p
 * A time of creation
 * A due date
 
-You should write a model to represent this series of information called `Task`.  In addition, you should write endpoints that let a person do the following:
+You should write a model to represent this series of information called `Task`.  In addition, you should write endpoints that allow for the following functionality:
 
 
 #### Create a task
