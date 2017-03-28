@@ -19,6 +19,9 @@ This project aims to help you "ramp up" and get comfortable working with the fol
 * [Academic Integrity](#academic-integrity)
 * [System Configuration](#system-configuration)
 * [Organization / Scope](#organization--scope)
+* [Expected Functionality](#expected-functionality)
+* [Testing Your Code](#testing-your-code)
+* [Extending the Assignment](#extending-the-assignment)
 * [Project Submission](#project-submission)
 
 ## Academic Integrity and Collaboration
@@ -70,14 +73,16 @@ pip install -r requirements.txt
 
 This installs within your virtual environment all the necessary modules that are required at the beginning of the project.
 
-**NOTE:** The overarching system configuration concepts are explained in more detail in [`this guide`](http://www.joeantonakakis.com/FlaskDevOps/), which we are using as our standard for setting up `Flask` apps in this course.  For information regarding system configuration beyond this project, or to learn about what each step is doing, refer to that guide.  
+**NOTE:** The overarching system configuration concepts are explained in more detail in [`this guide`](http://www.joeantonakakis.com/FlaskDevOps/), which we are using as our standard for setting up `Flask` apps in this course.  For information regarding advanced system configuration (which you might need for some of the project extensions, if you tackle them), refer to that guide.
 
 ## Organization / Scope
 
+
+
 ## Expected Functionality
 
-## Challenge Activities
-
 ## Testing Your Code
+
+## Extending the Assignment
 
 ## Project Submission
