@@ -150,7 +150,11 @@ We recommend testing your code using [`Flask Testing`](http://flask.pocoo.org/do
 
 ## Extending the Assignment
 
-TODO
+You can extend this assignment to perform the following functionalities:
+
+* Update any part of the task (name, description, tags, due date)
+* Create a `List` model that own tasks (separate tasks into different todo lists).  Create a `CRUD` interface for lists (Create, Read, Update, Delete) and modify the task creation endpoint to specify a `list_id`
+* Add a front-end for utilizing your `API` (we recommend `React`, `Angular`, or `jQuery` for making `AJAX` requests to your `API`)
 
 ## Project Submission
 
