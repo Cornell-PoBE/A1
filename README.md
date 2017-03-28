@@ -150,12 +150,20 @@ We recommend testing your code using [`Flask Testing`](http://flask.pocoo.org/do
 
 ## Extending the Assignment
 
-You can extend this assignment to perform the following functionalities:
+You can extend this assignment in the following ways:
 
-* Update any part of the task (name, description, tags, due date)
+* Provide endpoints for updating any part of a specific task (name, description, tags, due date)
 * Create a `List` model that own tasks (separate tasks into different todo lists).  Create a `CRUD` interface for lists (Create, Read, Update, Delete) and modify the task creation endpoint to specify a `list_id`
 * Add a front-end for utilizing your `API` (we recommend `React`, `Angular`, or `jQuery` for making `AJAX` requests to your `API`)
+* Use `SQLite` instead of files
+* Anything else you may like!
 
 ## Project Submission
 
-TODO
+You should submit your project along with a `readme.txt` for your citations, project setup information, and any extensions you might have done.  This should be at the root of your project (inside the `src` directory).  Run the following to zip your project:
+
+````bash
+zip -r src.zip src -x src/venv\*
+````
+
+You can then submit this file to `CMS`. 
