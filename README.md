@@ -16,13 +16,20 @@ This project aims to help you "ramp up" and get comfortable working with the fol
 
 ## Table of Contents
 
-* [Academic Integrity](#Academic-Integrity)
-* [System Configuration](#System-Configuration)
-* [Organization / Scope](#Organization-/-Scope)
+* [Academic Integrity](#academic-integrity)
+* [System Configuration](#system-configuration)
+* [Organization / Scope](#organization--scope)
+* [Project Submission](#project-submission)
 
-## Academic Integrity
+## Academic Integrity and Collaboration
 
-TODO
+### Academic Integrity
+
+Note that these projects should be completed **individually**.  As a result, all University-standard AI guidelines should be followed.
+
+### Code Attribution and Collaboration
+
+One of the reasons we chose `Flask` as an initial backend framework for students to use is because of its phenomenal support online.  Looking up framework documentation and adapting the docs' sample code to suite your own needs in something we expect and *want* you to do, as it allows you to explore and increase your self-sufficiency regarding backend development.  However, if you find code in a [`StackOverflow`](`https://stackoverflow.com/`) post or in an open source `Github` repository, then you should cite it accordingly.  See the [project submission](#project-submission) section for guidelines as to where to include those citations.
 
 ## System Configuration
 
@@ -66,3 +73,11 @@ This installs within your virtual environment all the necessary modules that are
 **NOTE:** The overarching system configuration concepts are explained in more detail in [`this guide`](http://www.joeantonakakis.com/FlaskDevOps/), which we are using as our standard for setting up `Flask` apps in this course.  For information regarding system configuration beyond this project, or to learn about what each step is doing, refer to that guide.  
 
 ## Organization / Scope
+
+## Expected Functionality
+
+## Challenge Activities
+
+## Testing Your Code
+
+## Project Submission
