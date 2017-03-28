@@ -120,7 +120,7 @@ You should write a model to represent this series of information called `Task`. 
 
 
 #### Create a task
-`POST /tasks?name={name}&description={description}&tags={tags-comma separated}&due_date={due date in unix time}`
+`POST /tasks?name={name}&description={description}&tags={tags(comma separated)}&due_date={due date(in unix time)}`
 
 Creates a task given the `URL` params above
 
@@ -146,7 +146,7 @@ Delete all tasks
 
 ## Testing Your Code
 
-We recommend testing your code using [`Flask Testing`](http://flask.pocoo.org/docs/0.12/testing/), or `cURL-ing` from the command line (although we prefer the tool [`httpie`](https://httpie.org/) :)).  We'll leave it to you to figure out the details.  
+We recommend testing your code using [`Flask Testing`](http://flask.pocoo.org/docs/0.12/testing/), or `cURL-ing` from the command line (although we prefer the tool [`httpie`](https://httpie.org/) `:)`).  We'll leave it to you to figure out the details.  
 
 ## Extending the Assignment
 
