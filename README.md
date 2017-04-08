@@ -122,7 +122,7 @@ Below consists of brief discussions of each one of the above files:
 * `requirements.txt` outlines the initial module dependencies of the app.  To install these, run `pip install -r requirements.txt`.  If you `pip install` a module during the duration of your project, be sure to `pip freeze > requirements.txt` to add the new module to the `requirements.txt` file, **or else we won't be able to run your project**
 * `run.py` is the run script for the `Flask` app.  You do not need to touch this file.
 * `todo/__init__.py` defines the `Flask` app instance. You do not need to touch this file.
-* `todo/db.py` defines a driver that reads and writes files as a form of persisting the data of your app.  **Read this file to get an idea of what functionalities it affords you and what you'll need to add to it**.  It outlines examples of how to perform basic storage operations.  You should be writing storage operations to create, read, delete, data in your app.
+* `todo/db.py` defines a driver that reads and writes files as a form of persisting the data of your app.  **Read this file to get an idea of what functionalities it affords you and what you'll need to add to it**.  It outlines examples of how to perform basic storage operations.  You should be writing basic storage operations to manipulate the data of your app.
 * `todo/models.py` is where you should define the models of your application.  All models should inherit from `Model`, which is the base class defining fundamental fields / functions required to store models as files.
 * `todo/routes.py` defines all the routes (a.k.a. endpoints) that users will be able to interact with in order to create todo list items, delete todo list items, and list todo list items.
 
