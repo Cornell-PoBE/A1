@@ -11,6 +11,7 @@ This project aims to help you "ramp up" and get comfortable working with the fol
 * [`JSON`](http://www.json.org/) as a means of sending and receiving data
 * `HTTP` requests and responses
 * Data modeling
+* Basic exposure to SQL querying
 * System configuration
 * `Python` / `Command-Line-Based` Testing
 
@@ -38,8 +39,13 @@ One of the reasons we chose `Flask` as an initial backend framework for students
 
 Perform the following steps in order:
 
-1. Get [`PyPI`](https://pip.pypa.io/en/stable/installing/) (`Python Package Index`) - In order to easily download `Python` modules required to run the project, as well as ones that may help you perform certain tasks in the future of the course, `PyPI` is **essential**.  
-2. Download [`virtualenv`](https://virtualenv.pypa.io/en/stable/installation/) - `virtualenv` helps establish an isolated `Python` environment you work in with its own set of `Python` modules it contains within a directory in your project's root.  Once you have `virtualenv`, run the following:
+#### 1. Get PyPI (Python Package Index)
+
+[`PyPI`](https://pip.pypa.io/en/stable/installing/)  allows one to easily download `Python` modules required to run the project, as well as ones that may help you perform certain tasks in the future of the course.  `PyPI` is **essential**.  
+
+#### 2. Download Virtualenv
+
+[`Virtualenv`](https://virtualenv.pypa.io/en/stable/installation/) helps establish an isolated `Python` environment.  The environment allows you to separate project-specific dependencies and their versions from the `Python` modules installed locally on your computer.  Once you have `virtualenv`, run the following:
 
 ````bash
 virtualenv venv
@@ -65,13 +71,22 @@ deactivate
 
 Whenever you work with this project, you should **always** be in your virtual environment.  Without this isolation, we might run into module versioning issues and other problems when trying to run your project, which creates administrative overhead.  
 
-3. Install dependencies - At the root of directory of the project skeleton code, run the following:
+#### 3. Install Dependencies
+
+At the root of directory of the project skeleton code, run the following:
 
 ````bash
 pip install -r requirements.txt
 ````
 
 This installs within your virtual environment all the necessary modules that are required at the beginning of the project.
+
+#### 4. Install SQLite
+
+While you have not seen `SQL` databases in class yet, the concept of "querying" data is one that we expect you to have a basic grasp of when approaching the future lectures on databases.  As a result, we have decided to use `SQLite` in this project as our means of storing and querying data.  It provides a simple interface you can leverage via its `Python` module (which you installed as part of **Step 3** of this guide).  
+
+`SQLite` can be installed via following [`this`](https://www.tutorialspoint.com/sqlite/sqlite_installation.htm) guide.  
+
 
 **NOTE:** The overarching system configuration concepts are explained in more detail in [`this guide`](http://www.joeantonakakis.com/FlaskDevOps/), which we are using as our standard for setting up `Flask` apps in this course.  For information regarding advanced system configuration (which you might need for some of the project extensions, if you tackle them), refer to that guide.
 
@@ -97,8 +112,8 @@ Below consists of brief discussions of each one of the above files:
 * `requirements.txt` outlines the initial module dependencies of the app.  To install these, run `pip install -r requirements.txt`.  If you `pip install` a module during the duration of your project, be sure to `pip freeze > requirements.txt` to add the new module to the `requirements.txt` file, **or else we won't be able to run your project**
 * `run.py` is the run script for the `Flask` app.  You do not need to touch this file.
 * `todo/__init__.py` defines the `Flask` app instance. You do not need to touch this file.
-* `todo/db.py` defines a driver that reads and writes files as a form of persisting the data of your app.  **Read this file to get an idea of what functionalities it affords you**.  
-* `todo/models.py` defines is where you should define the models of your application.  All models should inherit from `Model`, which is the base class defining fundamental fields / functions required to store models as files.
+* `todo/db.py` defines a driver that reads and writes files as a form of persisting the data of your app.  **Read this file to get an idea of what functionalities it affords you and what you'll need to add to it**.  
+* `todo/models.py` is where you should define the models of your application.  All models should inherit from `Model`, which is the base class defining fundamental fields / functions required to store models as files.
 * `todo/routes.py` defines all the routes (a.k.a. endpoints) that users will be able to interact with in order to create todo list items, delete todo list items, and list todo list items.
 
 This initial framework is just a guideline to implementing the base features of the app.  Feel free to change / reorganize at will.  However, the expected functionality (listed below) stays the same.  
@@ -120,7 +135,7 @@ You should write a model to represent this series of information called `Task`. 
 
 
 #### Create a task
-`POST /tasks?name={name}&description={description}&tags={tags(comma separated)}&due_date={due date(in unix time)}`
+`POST /tasks?name={name}&description={description}&tags={tags (comma separated)}&due_date={due date (in unix time)}`
 
 Creates a task given the `URL` params above
 
@@ -155,7 +170,6 @@ You can extend this assignment in the following ways:
 * Provide endpoints for updating any part of a specific task (name, description, tags, due date)
 * Create a `List` model that own tasks (separate tasks into different todo lists).  Create a `CRUD` interface for lists (Create, Read, Update, Delete) and modify the task creation endpoint to specify a `list_id`
 * Add a front-end for utilizing your `API` (we recommend `React`, `Angular`, or `jQuery` for making `AJAX` requests to your `API`)
-* Use `SQLite` instead of files
 * Anything else you may like!
 
 ## Project Submission
@@ -166,4 +180,4 @@ You should submit your project along with a `readme.txt` for your citations, pro
 zip -r src.zip src -x src/venv\*
 ````
 
-You can then submit this file to `CMS`. 
+You can then submit this file to `CMS`.
