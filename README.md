@@ -39,11 +39,21 @@ One of the reasons we chose `Flask` as an initial backend framework for students
 
 Perform the following steps in order:
 
-#### 1. Get PyPI (Python Package Index)
+#### 1. Check your Version of Python (should be 2.7)
+
+You can check via:
+
+````bash
+python --version
+````
+
+If your version differs, then download `2.7` [`here`](https://www.python.org/downloads/).
+
+#### 2. Get PyPI (Python Package Index)
 
 [`PyPI`](https://pip.pypa.io/en/stable/installing/)  allows one to easily download `Python` modules required to run the project, as well as ones that may help you perform certain tasks in the future of the course.  `PyPI` is **essential**.  
 
-#### 2. Download Virtualenv
+#### 3. Download Virtualenv
 
 [`Virtualenv`](https://virtualenv.pypa.io/en/stable/installation/) helps establish an isolated `Python` environment.  The environment allows you to separate project-specific dependencies and their versions from the `Python` modules installed locally on your computer.  Once you have `virtualenv`, run the following:
 
@@ -71,7 +81,7 @@ deactivate
 
 Whenever you work with this project, you should **always** be in your virtual environment.  Without this isolation, we might run into module versioning issues and other problems when trying to run your project, which creates administrative overhead.  
 
-#### 3. Install Dependencies
+#### 4. Install Dependencies
 
 At the root of directory of the project skeleton code, run the following:
 
@@ -81,11 +91,11 @@ pip install -r requirements.txt
 
 This installs within your virtual environment all the necessary modules that are required at the beginning of the project.
 
-#### 4. Install SQLite
+#### 5. Install SQLite
 
-While you have not seen `SQL` databases in class yet, the concept of "querying" data is one that we expect you to have a basic grasp of when approaching the future lectures on databases.  As a result, we have decided to use `SQLite` in this project as our means of storing and querying data.  It provides a simple interface you can leverage via its `Python` module (which you installed as part of **Step 3** of this guide).  
+While you have not seen `SQL` databases in class yet, the concept of "querying" data is one that we expect you to have a basic grasp of when approaching the future lectures on databases.  As a result, we have decided to use `SQLite` in this project as our means of storing and querying data.  It provides a simple interface you can leverage via its `Python` module, which is included, by default, in the version of Python we use for this class `Python 2.7`.  
 
-`SQLite` can be installed via following [`this`](https://www.tutorialspoint.com/sqlite/sqlite_installation.htm) guide.  
+`SQLite` can be installed by following [`this`](https://www.tutorialspoint.com/sqlite/sqlite_installation.htm) guide.  
 
 
 **NOTE:** The overarching system configuration concepts are explained in more detail in [`this guide`](http://www.joeantonakakis.com/FlaskDevOps/), which we are using as our standard for setting up `Flask` apps in this course.  For information regarding advanced system configuration (which you might need for some of the project extensions, if you tackle them), refer to that guide.
@@ -112,7 +122,7 @@ Below consists of brief discussions of each one of the above files:
 * `requirements.txt` outlines the initial module dependencies of the app.  To install these, run `pip install -r requirements.txt`.  If you `pip install` a module during the duration of your project, be sure to `pip freeze > requirements.txt` to add the new module to the `requirements.txt` file, **or else we won't be able to run your project**
 * `run.py` is the run script for the `Flask` app.  You do not need to touch this file.
 * `todo/__init__.py` defines the `Flask` app instance. You do not need to touch this file.
-* `todo/db.py` defines a driver that reads and writes files as a form of persisting the data of your app.  **Read this file to get an idea of what functionalities it affords you and what you'll need to add to it**.  
+* `todo/db.py` defines a driver that reads and writes files as a form of persisting the data of your app.  **Read this file to get an idea of what functionalities it affords you and what you'll need to add to it**.  It outlines examples of how to perform basic storage operations.  You should be writing storage operations to create, read, delete, data in your app.
 * `todo/models.py` is where you should define the models of your application.  All models should inherit from `Model`, which is the base class defining fundamental fields / functions required to store models as files.
 * `todo/routes.py` defines all the routes (a.k.a. endpoints) that users will be able to interact with in order to create todo list items, delete todo list items, and list todo list items.
 
