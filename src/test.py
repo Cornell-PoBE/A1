@@ -6,6 +6,13 @@ from datetime import datetime
 from flask import Flask, jsonify
 
 class test(unittest.TestCase):
+	def is_sub(self, sub, lst):
+		lst_s = set(lst)
+		for s in sub:
+		  if s not in lst_s:
+		    return False
+		return True
+
 	def setUp(self):
 		self.app = app.test_client()
 		self.app.testing = True
@@ -42,7 +49,7 @@ class test(unittest.TestCase):
 		result = json.loads(self.app.get("/tasks").data)
 		columns = ['DUE_DATE', 'NAME', 'TAGS', 'CREATED_AT', 'ID', 'DESCRIPTION']
 		for row in result:
-			assert(row.keys() == columns)
+			assert(self.is_sub(row.keys(),columns))
 		assert(len(result) == 2)
 
 	def test_delete_task(self):
