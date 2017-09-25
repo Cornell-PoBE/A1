@@ -19,7 +19,7 @@ class Model(object):
     """
     Dictionary representation of this Model
     """
-    return self.__dict__
+    return vars(self)
 
 
 
