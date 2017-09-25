@@ -4,12 +4,12 @@ import sqlite3
 
 # From: https://goo.gl/YzypOI
 def singleton(cls):
-    instances = {}
-    def getinstance():
-        if cls not in instances:
-            instances[cls] = cls()
-        return instances[cls]
-    return getinstance
+  instances = {}
+  def getinstance():
+    if cls not in instances:
+      instances[cls] = cls()
+    return instances[cls]
+  return getinstance
 
 class DB(object):
   """
@@ -18,7 +18,7 @@ class DB(object):
   """
 
   def __init__(self):
-    self.conn = sqlite3.connect("todo.db")
+    self.conn = sqlite3.connect("todo.db", check_same_thread=False)
     self.example_create_table()
     # TODO - Create all other tables here
 
