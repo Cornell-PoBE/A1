@@ -14,10 +14,6 @@ class test(unittest.TestCase):
 	def tearDown(self):
 		db.delete_task_table()
 
-	def test_hello_world(self):
-		result = json.loads(self.app.get("/").data)
-		assert(result == json.loads("""{"hello": "world"}"""))
-
 	def test_create_task(self):
 		input_data = dict(
 	     name="jogging",
