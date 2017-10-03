@@ -23,11 +23,12 @@ class DB(object):
     # TODO - Create all other tables here
 
   def create_task_table(self):
-      # TODO - Implement this to create a task table
-      pass
+    # TODO - Implement this to create a task table
+    pass
 
   def delete_task_table(self):
-      # TODO - Implement this to delete a task table
+    # TODO - Implement this to delete a task table
+    pass
 
   def example_create_table(self):
     """
