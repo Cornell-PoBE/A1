@@ -149,7 +149,7 @@ You should write a model to represent this series of information called `Task`. 
 #### Create a task
 `POST /tasks?name={name}&description={description}&tags={tags (comma separated)}&due_date={due date (in unix time)}`
 
-Creates a task given the `URL` params above
+Creates a task with the following parameters. Testing is done via the `request.form` not `request.args` in `test.py`. As such, you only need to ensure that all the tests pass in `test.py` to get full credit.
 
 #### List all tasks
 `GET /tasks`
