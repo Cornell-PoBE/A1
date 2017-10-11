@@ -151,25 +151,70 @@ You should write a model to represent this series of information called `Task`. 
 
 Creates a task with the following parameters. Testing is done via the `request.form` not `request.args` in `test.py`. As such, you only need to ensure that all the tests pass in `test.py` to get full credit.
 
+```json
+{
+	"name": {name}
+	"description": {description}
+	"tags": {tags,seperate,by,commas}
+	"due_date": {due_date}
+}
+```
+
 #### List all tasks
 `GET /tasks`
 
 Get a list of all tasks
+
+```json
+{
+	"DUE_DATE": {DUE_DATE},
+	"NAME": {NAME},
+	"TAGS"" {TAGS},
+	"CREATED_AT",: {CREATED_AT},
+	"ID": {ID},
+	"DESCRIPTION": {DESCRIPTION},
+	...
+}
+```
 
 #### Get task by ID
 `GET /tasks/{id}`
 
 Get a task by its ID
 
+```json
+{
+	"DUE_DATE": {DUE_DATE},
+	"NAME": {NAME},
+	"TAGS"" {TAGS},
+	"CREATED_AT",: {CREATED_AT},
+	"ID": {ID},
+	"DESCRIPTION": {DESCRIPTION},
+	...
+}
+```
+
 #### Delete a task
 `DELETE /tasks/{id}`
 
 Delete a specific task
 
+```json
+{
+	"success": "true"
+}
+```
+
 #### Delete all tasks
 `DELETE /tasks/all`
 
 Delete all tasks
+
+```json
+{
+	"success": "true"
+}
+```
 
 ## Testing Your Code
 
