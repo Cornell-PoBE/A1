@@ -153,10 +153,13 @@ Creates a task with the following parameters. Testing is done via the `request.f
 
 ```json
 {
-	"name": {name}
-	"description": {description}
-	"tags": {tags,seperate,by,commas}
-	"due_date": {due_date}
+	"due_date": 100000000,
+	"name": "joe",
+	"tags": "hi,mom",
+	"created_at",: 10203030,
+	"id": "10001",
+	"description": "this is some cool stuff",
+	...
 }
 ```
 
@@ -167,12 +170,12 @@ Get a list of all tasks
 
 ```json
 {
-	"DUE_DATE": {DUE_DATE},
-	"NAME": {NAME},
-	"TAGS"" {TAGS},
-	"CREATED_AT",: {CREATED_AT},
-	"ID": {ID},
-	"DESCRIPTION": {DESCRIPTION},
+	"DUE_DATE": 100000000,
+	"NAME": "joe",
+	"TAGS": "hi,mom",
+	"CREATED_AT",: 10203030,
+	"ID": "10001",
+	"DESCRIPTION": "this is some cool stuff",
 	...
 }
 ```
@@ -184,12 +187,12 @@ Get a task by its ID
 
 ```json
 {
-	"DUE_DATE": {DUE_DATE},
-	"NAME": {NAME},
+	"DUE_DATE": 100000000,
+	"NAME": "joe",
 	"TAGS"" {TAGS},
-	"CREATED_AT",: {CREATED_AT},
-	"ID": {ID},
-	"DESCRIPTION": {DESCRIPTION},
+	"CREATED_AT",: 10203030,
+	"ID": "10001",
+	"DESCRIPTION": "this is some cool stuff",
 	...
 }
 ```
