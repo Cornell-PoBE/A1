@@ -159,7 +159,6 @@ Creates a task with the following parameters. Testing is done via the `request.f
 	"created_at": 10203030,
 	"id": "10001",
 	"description": "this is some cool stuff",
-	...
 }
 ```
 
@@ -176,7 +175,6 @@ Get a list of all tasks
 	"CREATED_AT": 10203030,
 	"ID": "10001",
 	"DESCRIPTION": "this is some cool stuff",
-	...
 }
 ```
 
