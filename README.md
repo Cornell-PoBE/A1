@@ -188,7 +188,7 @@ Get a task by its ID
 	"DUE_DATE": 100000000,
 	"NAME": "joe",
 	"TAGS": "hi,mom",
-	"CREATED_AT",: 10203030,
+	"CREATED_AT": 10203030,
 	"ID": "10001",
 	"DESCRIPTION": "this is some cool stuff"
 }
