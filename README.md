@@ -153,12 +153,12 @@ Creates a task with the following parameters. Testing is done via the `request.f
 
 ```json
 {
-	"due_date": 100000000,
-	"name": "joe",
-	"tags": "hi,mom",
-	"created_at": 10203030,
-	"id": "10001",
-	"description": "this is some cool stuff",
+	"due_date": 1519325737,
+	"description": "Need to jog",
+	"tags": "run,jog,sprint",
+	"created_at": 1519325737,
+	"id": "e11ee451-182b-11e8-bade-9801a7a5b675",
+	"name": "jogging"
 }
 ```
 
@@ -168,14 +168,14 @@ Creates a task with the following parameters. Testing is done via the `request.f
 Get a list of all tasks
 
 ```json
-{
-	"DUE_DATE": 100000000,
-	"NAME": "joe",
-	"TAGS": "hi,mom",
-	"CREATED_AT": 10203030,
-	"ID": "10001",
-	"DESCRIPTION": "this is some cool stuff",
-}
+[{
+	"due_date": 1519325737,
+	"description": "Need to jog",
+	"tags": "run,jog,sprint",
+	"created_at": 1519325737,
+	"id": "e11ee451-182b-11e8-bade-9801a7a5b675",
+	"name": "jogging"
+}]
 ```
 
 #### Get task by ID
@@ -185,12 +185,12 @@ Get a task by its ID
 
 ```json
 {
-	"DUE_DATE": 100000000,
-	"NAME": "joe",
-	"TAGS": "hi,mom",
-	"CREATED_AT": 10203030,
-	"ID": "10001",
-	"DESCRIPTION": "this is some cool stuff"
+	"due_date": 1519325737,
+	"description": "Need to jog",
+	"tags": "run,jog,sprint",
+	"created_at": 1519325737,
+	"id": "e11ee451-182b-11e8-bade-9801a7a5b675",
+	"name": "jogging"
 }
 ```
 

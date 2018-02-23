@@ -1,5 +1,6 @@
 from abc import ABCMeta
 import uuid
+from datetime import datetime
 
 class Model(object):
   """
@@ -8,12 +9,13 @@ class Model(object):
   """
   __metaclass__ = ABCMeta
 
-  def __init__(self, id):
+  def __init__(self):
     """
     Initializes the model with a Universal Unique
     Identifier as an id
     """
     self.id = str(uuid.uuid1())
+    self.created_at=int((datetime.now()-datetime(1970,1,1)).total_seconds())
 
   def to_dict(self):
     """

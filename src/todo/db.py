@@ -19,7 +19,7 @@ class DB(object):
 
   def __init__(self):
     self.conn = sqlite3.connect("todo.db", check_same_thread=False)
-    self.example_create_table()
+    self.example_create_table() # Delete this line when implementing
     # TODO - Create all other tables here
 
   def create_task_table(self):
