@@ -53,9 +53,19 @@ If your version differs, then download `2.7` [`here`](https://www.python.org/dow
 
 [`PyPI`](https://pip.pypa.io/en/stable/installing/)  allows one to easily download `Python` modules required to run the project, as well as ones that may help you perform certain tasks in the future of the course.  `PyPI` is **essential**.  
 
-#### 3. Download Virtualenv
+#### 3. Clone the Source Code
 
-[`Virtualenv`](https://virtualenv.pypa.io/en/stable/installation/) helps establish an isolated `Python` environment.  The environment allows you to separate project-specific dependencies and their versions from the `Python` modules installed locally on your computer.  Once you have `virtualenv`, run the following:
+For this project and future projects, we will be using git. If you don't have git, you can find it [`here`](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git). 
+You can clone the source code of this project by running the following:
+
+```bash
+git clone https://github.com/Cornell-PoBE/A1.git
+cd A1
+```
+
+#### 4. Download Virtualenv
+
+[`Virtualenv`](https://virtualenv.pypa.io/en/stable/installation/) helps establish an isolated `Python` environment.  The environment allows you to separate project-specific dependencies and their versions from the `Python` modules installed locally on your computer.  Once you have `virtualenv`, run the following inside of the A1 directory:
 
 ````bash
 virtualenv -p python2.7 venv
@@ -81,17 +91,17 @@ deactivate
 
 Whenever you work with this project, you should **always** be in your virtual environment.  Without this isolation, we might run into module versioning issues and other problems when trying to run your project, which creates administrative overhead.  
 
-#### 4. Install Dependencies
+#### 5. Install Dependencies
 
 At the root of directory of the project skeleton code, run the following:
 
 ````bash
-pip install -r requirements.txt
+pip install -r src/requirements.txt
 ````
 
 This installs within your virtual environment all the necessary modules that are required at the beginning of the project.
 
-#### 5. Install SQLite
+#### 6. Install SQLite
 
 Having been given some initial exposure to `SQL` databases in class, the concept of "querying" data is one that we expect you to have a basic grasp of when approaching the future lectures on databases.  As a result, we have decided to use `SQLite` in this project as our means of storing and querying data.  It provides a simple interface you can leverage via its `Python` module, which is included, by default, in the version of Python we use for this class `Python 2.7`.  
 
