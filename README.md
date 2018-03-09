@@ -179,7 +179,7 @@ Get a list of all tasks
 ```
 
 #### Get task by ID
-`GET /tasks/id={id}`
+`GET /tasks?id={id}`
 
 Get a task by its ID
 
@@ -195,7 +195,7 @@ Get a task by its ID
 ```
 
 #### Delete a task
-`DELETE /tasks/id={id}`
+`DELETE /tasks?id={id}`
 
 Delete a specific task
 
